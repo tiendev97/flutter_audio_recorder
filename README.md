@@ -72,13 +72,6 @@ await recorder.initialized;
 var recorder = FlutterAudioRecorder("file_path", audioFormat: AudioFormat.AAC, sampleRate: 22000); // sampleRate is 16000 by default
 await recorder.initialized;
 ```
-
-##### Audio Extension and Format Mapping
-| Audio Format  | Audio Extension List |
-| ------------- | ------------- |
-| AAC  | .m4a .aac .mp4  |
-| WAV  | .wav  |
-
 #### Start recording
 ```
 await recorder.start();
@@ -99,23 +92,6 @@ new Timer.periodic(tick, (Timer t) async {
         });
       });
 ```
-
-##### Recording
-| Name  | Description |
-| ------------- | ------------- |
-| path  | String  |
-| extension  | String  |
-| duration  | Duration  |
-| audioFormat  | AudioFormat  |
-| metering  | AudioMetering  |
-| status  | RecordingStatus  |
-
-##### Recording.metering
-| Name  | Description |
-| ------------- | ------------- |
-| peakPower  | double  |
-| averagePower  | double  |
-| isMeteringEnabled  | bool  |
 
 ##### Recording.status
 `Unset`,`Initialized`,`Recording`,`Paused`,`Stopped`
